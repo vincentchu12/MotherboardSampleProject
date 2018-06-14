@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Jun 14 01:51:11 2018
+# Process ID: 3580
+# Current directory: C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.runs/synth_1
+# Command line: vivado.exe -log Motherboard.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Motherboard.tcl
+# Log file: C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.runs/synth_1/Motherboard.vds
+# Journal file: C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Motherboard.tcl -notrace

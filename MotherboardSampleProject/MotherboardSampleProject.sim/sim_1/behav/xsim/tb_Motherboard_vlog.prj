@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v" \
+"../../../../MotherboardSampleProject.srcs/sources_1/new/MIPS.v" \
+"../../../../MotherboardSampleProject.srcs/sources_1/new/Memory.v" \
+"../../../../MotherboardSampleProject.srcs/sources_1/new/Motherboard.v" \
+"../../../../MotherboardSampleProject.srcs/sim_1/new/tb_Motherboard.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

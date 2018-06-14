@@ -1,0 +1,796 @@
+
+*** Running vivado
+    with args -log Motherboard.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Motherboard.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Motherboard.tcl -notrace
+Command: synth_design -top Motherboard -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5592 
+WARNING: [Synth 8-2507] parameter declaration becomes local in RAM with formal parameter declaration list [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:41]
+WARNING: [Synth 8-2507] parameter declaration becomes local in RAM with formal parameter declaration list [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:42]
+WARNING: [Synth 8-2507] parameter declaration becomes local in FIFO with formal parameter declaration list [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:170]
+WARNING: [Synth 8-2507] parameter declaration becomes local in STACK with formal parameter declaration list [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:270]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Motherboard with formal parameter declaration list [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:69]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 353.125 ; gain = 112.695
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Motherboard' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:57]
+	Parameter CLOCK_DIVIDER bound to: 100 - type: integer 
+	Parameter ROM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CLOCK_GENERATOR' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:24]
+	Parameter DIVIDE bound to: 100 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CLOCK_GENERATOR' (1#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:24]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:113]
+	Parameter LENGTH bound to: 256 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter FILE_NAME bound to: rom.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'rom.mem' is read successfully [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:146]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (2#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:113]
+WARNING: [Synth 8-689] width (9) of port connection 'a' does not match port width (8) of module 'ROM' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:110]
+INFO: [Synth 8-6157] synthesizing module 'MIPS' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:162]
+	Parameter BYTE bound to: 2'b10 
+	Parameter HALF bound to: 2'b01 
+	Parameter WORD bound to: 2'b00 
+INFO: [Synth 8-6157] synthesizing module 'PROCESSOR_DECODER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:433]
+INFO: [Synth 8-6157] synthesizing module 'IMMEDIATE_TO_ALU_CONVERTER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:682]
+INFO: [Synth 8-6155] done synthesizing module 'IMMEDIATE_TO_ALU_CONVERTER' (3#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:682]
+WARNING: [Synth 8-151] case item 6'b000001 is unreachable [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:494]
+INFO: [Synth 8-6155] done synthesizing module 'PROCESSOR_DECODER' (4#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:433]
+INFO: [Synth 8-6157] synthesizing module 'REGISTER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:375]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REGISTER' (5#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:375]
+INFO: [Synth 8-6157] synthesizing module 'ADDER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:725]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ADDER' (6#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:725]
+INFO: [Synth 8-6157] synthesizing module 'MUX' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+	Parameter WIDTH bound to: 5 - type: integer 
+	Parameter INPUTS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MUX' (7#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+WARNING: [Synth 8-689] width (42) of port connection 'in' does not match port width (15) of module 'MUX' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:288]
+INFO: [Synth 8-6157] synthesizing module 'REGFILE' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:737]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'REGFILE' (8#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:737]
+INFO: [Synth 8-6157] synthesizing module 'VALUE_EXTEND' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:860]
+	Parameter INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter OUTPUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VALUE_EXTEND' (9#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:860]
+INFO: [Synth 8-6157] synthesizing module 'SHIFT_LEFT' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:877]
+	Parameter AMOUNT bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SHIFT_LEFT' (10#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:877]
+WARNING: [Synth 8-689] width (32) of port connection 'a' does not match port width (16) of module 'VALUE_EXTEND' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:328]
+INFO: [Synth 8-6157] synthesizing module 'MUX__parameterized0' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter INPUTS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MUX__parameterized0' (10#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+INFO: [Synth 8-6157] synthesizing module 'MUX__parameterized1' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter INPUTS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MUX__parameterized1' (10#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:780]
+WARNING: [Synth 8-151] case item 6'b100001 is unreachable [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:807]
+WARNING: [Synth 8-151] case item 6'b100000 is unreachable [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:807]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (11#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:780]
+INFO: [Synth 8-6157] synthesizing module 'OR' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:60]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OR' (12#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'MUX__parameterized2' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter INPUTS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MUX__parameterized2' (12#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:113]
+INFO: [Synth 8-6157] synthesizing module 'TRIBUFFER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:37]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TRIBUFFER' (13#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:37]
+INFO: [Synth 8-6157] synthesizing module 'SHIFT_RIGHT' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:886]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SHIFT_RIGHT' (14#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:886]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS' (15#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:162]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:22]
+	Parameter LENGTH bound to: 1024 - type: integer 
+	Parameter USE_FILE bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter MINIMUM_SECTIONAL_WIDTH bound to: 8 - type: integer 
+	Parameter FILE_NAME bound to: ram.mem - type: string 
+	Parameter ADDRESS_WIDTH bound to: 10 - type: integer 
+	Parameter BYTE_ENABLES bound to: 4 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'ram.mem' is read successfully [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:66]
+WARNING: [Synth 8-6014] Unused sequential element data_out_reg was removed.  [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (16#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:22]
+INFO: [Synth 8-6157] synthesizing module 'AND' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:51]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND' (17#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:51]
+INFO: [Synth 8-6157] synthesizing module 'NAND' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:82]
+	Parameter WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'NAND' (18#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:82]
+INFO: [Synth 8-6157] synthesizing module 'AND__parameterized0' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:51]
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AND__parameterized0' (18#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:51]
+INFO: [Synth 8-6157] synthesizing module 'DECODER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:130]
+	Parameter INPUT_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DECODER' (19#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/GlueLogic.v:130]
+WARNING: [Synth 8-689] width (16) of port connection 'Q' does not match port width (32) of module 'REGISTER' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:240]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:245]
+INFO: [Synth 8-6155] done synthesizing module 'Motherboard' (20#1) [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Motherboard.v:57]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[31]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[30]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[29]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[28]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[27]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[26]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[25]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[24]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[23]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[22]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[21]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[20]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[19]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[18]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[17]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[16]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[15]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[14]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[13]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[12]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[11]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[10]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[9]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[8]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[7]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[6]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[5]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[4]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[3]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 388.301 ; gain = 147.871
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 388.301 ; gain = 147.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 388.301 ; gain = 147.871
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/constrs_1/new/Motherboard.xdc]
+Finished Parsing XDC File [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/constrs_1/new/Motherboard.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/constrs_1/new/Motherboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Motherboard_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Motherboard_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 751.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 751.672 ; gain = 511.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 751.672 ; gain = 511.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 751.672 ; gain = 511.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "rom" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "PCSrc" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:842]
+WARNING: [Synth 8-327] inferring latch for variable 'result_reg' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:798]
+WARNING: [Synth 8-327] inferring latch for variable 'high_result_reg' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:815]
+WARNING: [Synth 8-327] inferring latch for variable 'low_result_reg' [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/MIPS.v:816]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 751.672 ; gain = 511.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 9     
+	   3 Input     32 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              32K Bit         RAMs := 1     
++---Muxes : 
+	  13 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 9     
+	  24 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  17 Input      3 Bit        Muxes := 1     
+	  17 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 4     
+	  24 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CLOCK_GENERATOR 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ROM 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input     33 Bit        Muxes := 1     
+Module IMMEDIATE_TO_ALU_CONVERTER 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module PROCESSOR_DECODER 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input      6 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	  17 Input      3 Bit        Muxes := 1     
+	  17 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	  17 Input      1 Bit        Muxes := 4     
+Module REGISTER 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ADDER 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module REGFILE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module VALUE_EXTEND 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	  24 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	  24 Input      1 Bit        Muxes := 1     
+Module MIPS 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+Module RAM 
+Detailed RTL Component Info : 
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module DECODER 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP low_result0, operation Mode is: A*B.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: Generating DSP low_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: Generating DSP low_result0, operation Mode is: A*B.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: Generating DSP low_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+DSP Report: operator low_result0 is absorbed into DSP low_result0.
+WARNING: [Synth 8-6014] Unused sequential element output1/Q_reg was removed.  [C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.srcs/sources_1/new/Memory.v:387]
+INFO: [Synth 8-5545] ROM "clock/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock/slow_clk" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[31]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[30]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[29]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[28]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[27]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[26]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[25]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[24]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[23]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[22]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[21]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[20]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[19]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[18]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[17]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[16]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[15]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[14]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[13]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[12]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[11]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[10]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[9]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[8]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[7]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[6]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[5]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[4]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[3]
+WARNING: [Synth 8-3331] design PROCESSOR_DECODER has unconnected port alu_result[2]
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[31]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[30]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[29]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[28]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[27]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[26]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[25]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[24]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[23]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[22]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[21]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[20]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[19]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[18]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[17]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-3332] Sequential element (output0/Q_reg[16]) is unused and will be removed from module Motherboard.
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[8]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[8]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[8]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[8]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[9]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[9]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[9]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[9]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[4]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[5]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[5]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[5]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[5]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[6]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[7]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[7]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[7]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[7]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[10]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[10]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[10]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[10]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[11]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[11]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[11]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[11]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[12]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[12]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[12]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[12]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[29]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[31]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[15]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[15]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[15]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[15]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[27]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[22]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[13]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[13]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[13]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[13]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[24]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[18]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[19]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[25]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[26]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[16]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[28]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[17]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\low_result_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[20]  is always disabled
+WARNING: [Synth 8-264] enable of latch \mips/alu /\high_result_reg[20]  is always disabled
+INFO: [Common 17-14] Message 'Synth 8-264' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (result_reg[31]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[30]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[29]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[28]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[27]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[26]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[25]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[24]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[23]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[22]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[21]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[20]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[19]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[18]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[17]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[16]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[15]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[14]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[13]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[12]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[11]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[10]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[9]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[8]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[7]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[6]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[5]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[4]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[3]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[2]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[1]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (result_reg[0]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[31]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[30]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[29]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[28]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[27]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[26]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[25]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[24]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[23]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[22]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[21]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[20]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[19]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[18]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[17]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[16]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[15]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[14]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[13]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[12]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[11]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[10]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[9]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[8]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[7]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[6]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[5]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[4]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[3]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[2]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (high_result_reg[1]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[31]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[30]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[29]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[28]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[27]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[26]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[25]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[24]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[23]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[22]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[21]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[20]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[19]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[18]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[17]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[16]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[15]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[14]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[13]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[12]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (low_result_reg[11]) is unused and will be removed from module ALU.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 751.672 ; gain = 511.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------------------------+-----------+----------------------+-------------------+
+|Module Name | RTL Object                     | Inference | Size (Depth x Width) | Primitives        | 
++------------+--------------------------------+-----------+----------------------+-------------------+
+|Motherboard | mips/regfile/register_file_reg | Implied   | 32 x 32              | RAM32M x 12       | 
+|Motherboard | ram/ram_reg                    | Implied   | 1 K x 32             | RAM256X1S x 128   | 
++------------+--------------------------------+-----------+----------------------+-------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 791.516 ; gain = 551.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 813.973 ; gain = 573.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+--------------------------------+-----------+----------------------+-------------------+
+|Module Name | RTL Object                     | Inference | Size (Depth x Width) | Primitives        | 
++------------+--------------------------------+-----------+----------------------+-------------------+
+|Motherboard | mips/regfile/register_file_reg | Implied   | 32 x 32              | RAM32M x 12       | 
+|Motherboard | ram/ram_reg                    | Implied   | 1 K x 32             | RAM256X1S x 128   | 
++------------+--------------------------------+-----------+----------------------+-------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |    31|
+|3     |LUT2      |   114|
+|4     |LUT3      |    62|
+|5     |LUT4      |    92|
+|6     |LUT5      |   141|
+|7     |LUT6      |   202|
+|8     |RAM256X1S |   128|
+|9     |RAM32M    |    12|
+|10    |FDCE      |    57|
+|11    |IBUF      |    18|
+|12    |OBUF      |    16|
++------+----------+------+
+
+Report Instance Areas: 
++------+--------------------+----------------+------+
+|      |Instance            |Module          |Cells |
++------+--------------------+----------------+------+
+|1     |top                 |                |   875|
+|2     |  clock             |CLOCK_GENERATOR |    82|
+|3     |  mips              |MIPS            |   547|
+|4     |    alu             |ALU             |     4|
+|5     |    adder           |ADDER           |     1|
+|6     |    branch_pc_adder |ADDER_0         |     3|
+|7     |    pc_register     |REGISTER_1      |   467|
+|8     |    regfile         |REGFILE         |    72|
+|9     |  output0           |REGISTER        |    16|
+|10    |  ram               |RAM             |   194|
++------+--------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 826.590 ; gain = 586.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 322 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 826.590 ; gain = 222.789
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 826.590 ; gain = 586.160
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 189 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 140 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 128 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 278 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 826.590 ; gain = 594.793
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vcvin/Documents/MotherboardSampleProject/MotherboardSampleProject.runs/synth_1/Motherboard.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Motherboard_utilization_synth.rpt -pb Motherboard_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 826.590 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 14 01:52:09 2018...
